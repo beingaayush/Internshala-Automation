@@ -1,0 +1,155 @@
+body {
+  background-color: #FCF7F8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.resume-container {
+  width: 1000px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #CED3DC;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.resume-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #5B616A;
+}
+
+/* Form Grid */
+.resume-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(40px, auto);
+  gap: 15px;
+}
+
+/* Section Titles */
+.resume-section-title {
+  grid-column: span 4;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #5B616A;
+}
+
+/* Section Entries */
+.resume-section-entry {
+  display: contents; /* allow grid children to flow into parent grid */
+}
+
+/* Inputs */
+.resume-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ABA9C3;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.resume-input:focus {
+  outline: none;
+  border-color: #275DAD;
+}
+
+/* Add / Remove buttons */
+.resume-add-button,
+.resume-remove-button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.resume-add-button {
+  background-color: #275DAD;
+  color: #FCF7F8;
+  border: none;
+}
+
+.resume-add-button:hover {
+  opacity: 0.9;
+}
+
+.resume-remove-button {
+  background-color: #5B616A;
+  color: #FCF7F8;
+  border: none;
+}
+
+.resume-remove-button:hover {
+  opacity: 0.9;
+}
+
+/* Submit / Delete buttons */
+.resume-submit-button {
+  grid-column: span 4;
+  padding: 12px;
+  background-color: #275DAD;
+  color: #FCF7F8;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.resume-submit-button:hover {
+  opacity: 0.9;
+}
+
+.resume-delete-button {
+  grid-column: span 4;
+  padding: 10px 14px;
+  background-color: #DC2626;
+  color: #FCF7F8;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.resume-delete-button:hover {
+  opacity: 0.9;
+}
+
+
+/* RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .resume-container {
+    width: 95%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  .resume-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resume-section-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .resume-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .resume-add-button,
+  .resume-remove-button,
+  .resume-submit-button,
+  .resume-delete-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}

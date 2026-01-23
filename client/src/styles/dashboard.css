@@ -1,0 +1,148 @@
+body {
+  background-color: #F7F8FC;
+  font-family: 'Arial', Helvetica, sans-serif;
+  color: #1E1E2F;
+}
+
+.dashboard-container {
+  width: 1000px;
+  margin: 30px auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 32px;
+  color: #0E103D;
+  margin-bottom: 20px;
+}
+
+.dashboard-text {
+  font-size: 18px;
+  color: #4A4F6A;
+}
+
+.dashboard-section-title {
+  font-size: 22px;
+  color: #003554;
+  margin-bottom: 10px;
+}
+
+/* Card layout for each section */
+.dashboard-card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(20, 20, 40, 0.08);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  align-items: center;
+}
+
+.dashboard-highlight {
+  font-weight: bold;
+  color: #1F3BB3;
+  padding: 3px 6px;
+  border-radius: 5px;
+  background-color: #E9EDFF;
+}
+
+/* Buttons */
+.dashboard-btn-start {
+  font-size: 15px;
+  background-color: #1F3BB3;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dashboard-btn-start:hover {
+  background-color: rgb(8, 218, 11);
+  color: white;
+}
+
+.dashboard-btn-start:disabled {
+  background-color: #ABA9C3;
+  cursor: not-allowed;
+}
+
+.dashboard-btn-stop {
+  background-color: #D64545;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dashboard-btn-stop:disabled {
+  background-color: #ABA9C3;
+  cursor: not-allowed;
+}
+
+.dashboard-btn-nav {
+  font-size: 15px;
+  background-color: #1F3BB3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dashboard-btn-nav:hover {
+  background-color: #02182B;
+  color: white;
+}
+
+.logout-btn {
+  background-color: red;
+  color: white;
+}
+
+/* Line */
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #E1E4F0;
+  margin: 20px 0;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .dashboard-card {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-title {
+    font-size: 26px;
+  }
+
+  .dashboard-section-title {
+    font-size: 18px;
+  }
+
+  .dashboard-text {
+    font-size: 15px;
+  }
+
+  .dashboard-btn-start,
+  .dashboard-btn-stop,
+  .dashboard-btn-nav {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}

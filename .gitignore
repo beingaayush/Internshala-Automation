@@ -1,0 +1,28 @@
+# root
+
+node_modules/
+package-lock.json
+
+# environment files
+
+.env
+
+# client
+
+client/node_modules/
+client/build/
+client/.env
+
+# server
+
+Server/node_modules/
+Server/.env
+
+# automation data
+
+Server/automation/cookies/
+
+# OS / editor
+
+.DS_Store
+.vscode/
