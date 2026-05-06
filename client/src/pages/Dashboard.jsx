@@ -63,7 +63,7 @@ function Dashboard() {
             if (res.data.stats.totalApplied < res.data.stats.totalFound) {
               setCurrentAction("Applying internships...");
             } else if (res.data.stats.totalApplied === res.data.stats.totalFound) {
-              setCurrentAction("Automation completed ✅");
+              setCurrentAction("Automation completed");
             } else {
               setCurrentAction("Searching internships...");
             }
@@ -135,7 +135,7 @@ function Dashboard() {
       {/* Resume Status */}
       <div className="dashboard-card">
       <h3 className="dashboard-section-title">Resume Status</h3>
-      <p className="dashboard-status">{resumeExists ? "✅ Resume created" : "❌ Not created"}</p>
+      <p className="dashboard-status">{resumeExists ? "Resume created" : "Not created"}</p>
       </div>
 
       <hr />

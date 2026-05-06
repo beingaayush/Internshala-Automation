@@ -4,7 +4,7 @@ const path = require("path");
 const Resume = require("../models/Resume");
 
 // ===================== ANSWER LOGIC =====================
-function getAnswer(question, resume) {
+function getAnsw(question, resume) {
   const q = question.toLowerCase();
 
   if (q.includes("why should we hire")) {
@@ -71,14 +71,14 @@ async function startAutomation(userId) {
   );
 
   if (!isLoggedIn) {
-    console.log("🔐 Not logged in. Waiting for manual login + CAPTCHA...");
+    console.log("Not logged in. Waiting for manual login + CAPTCHA...");
     await page.waitForSelector('a[data-label="profile"]', { timeout: 0 });
 
     const cookies = await page.cookies();
     fs.writeFileSync(cookiesPath, JSON.stringify(cookies, null, 2));
-    console.log("💾 Cookies saved for user:", userId);
+    console.log("Cookies saved for user:", userId);
   } else {
-    console.log("✅ Already logged in via cookies");
+    console.log("Already logged in via cookies");
   }
 
   // ------------------ FETCH RESUME ------------------
@@ -87,7 +87,7 @@ async function startAutomation(userId) {
     resume = await getResume(userId);
     if (!resume) throw new Error("Resume not found");
   } catch (err) {
-    console.error("❌ Resume fetch failed:", err.message);
+    console.error("Resume fetch failed:", err.message);
     await browser.close();
     return;
   }
@@ -97,7 +97,7 @@ async function startAutomation(userId) {
   let hasMore = true;
 
   while (hasMore) {
-    console.log(`🔍 Searching internships - Page ${pageNum}...`);
+    console.log(`Searching internships - Page ${pageNum}...`);
     await page.goto(`https://internshala.com/internships?page=${pageNum}`, {
       waitUntil: "networkidle2",
     });
@@ -110,12 +110,12 @@ async function startAutomation(userId) {
     );
 
     if (internshipLinks.length === 0) {
-      console.log("🚫 No more internships found.");
+      console.log("No more internships found.");
       hasMore = false;
       break;
     }
 
-    console.log(`📄 Found ${internshipLinks.length} internships on page ${pageNum}`);
+    console.log(`Found ${internshipLinks.length} internships on page ${pageNum}`);
 
     // ------------------ APPLY LOOP ------------------
     for (const link of internshipLinks) {
@@ -126,7 +126,7 @@ async function startAutomation(userId) {
         // Apply button
         const applyBtn = await newPage.$('button#continue_button, button#easy_apply_button, button#apply_now_button');
         if (!applyBtn) {
-          console.log("⚠️ No apply button:", link);
+          console.log("No apply button:", link);
           await newPage.close();
           continue;
         }
@@ -152,20 +152,20 @@ async function startAutomation(userId) {
         const submitBtn = await newPage.$("button[type='submit']");
         if (submitBtn) {
           await submitBtn.click();
-          console.log("✅ Applied successfully:", link);
+          console.log("Applied successfully:", link);
           await newPage.waitForTimeout(2000);
         }
 
         await newPage.close();
       } catch (err) {
-        console.log("⚠️ Failed to apply:", link, err.message);
+        console.log("Failed to apply:", link, err.message);
       }
     }
 
     pageNum++;
   }
 
-  console.log("🎯 Automation completed for user:", userId);
+  console.log("Automation completed for user:", userId);
   await browser.close();
 }
 
