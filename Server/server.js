@@ -23,8 +23,6 @@ app.get("/api/protected", authMiddleware, (req, res) => {
 });
 
 
-
-
 app.get("/",(req,res)=>{
     res.send("Internshala Automation Backend Running");
 })
