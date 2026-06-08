@@ -1,8 +1,19 @@
-# 🚀 Internshala Automation – MERN Stack Automation Project
+# Internshala Automation – MERN Stack Automation Project
 
 An end-to-end **MERN Stack automation project** that automates the Internshala internship application process 
 using **Puppeteer**, with secure authentication, resume management, and a centralized dashboard.
 
+## 🎥 Project Demo
+
+Detailed walkthrough covering:
+- Full project execution
+- Architecture
+- Folder structure
+- Backend APIs
+- Puppeteer automation flow
+- JWT authentication
+
+Watch Demo: https://www.loom.com/share/cac078918b9545c2812ff9d6da954bb1
 -------------------------------------------
 
 📌 Features
