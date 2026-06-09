@@ -67,14 +67,13 @@ Watch Demo: https://www.loom.com/share/cac078918b9545c2812ff9d6da954bb1
 
 📁 Folder Structure
 
-
-INTERNSHALA AUTOMATION/
+INTERNSHALA-AUTOMATION/
 │
 ├── client/        # React frontend
 ├── Server/        # Node + Express backend
 ├── package.json   # Root scripts (concurrently)
 └── README.md
-```
+
 
 ------------------------------------------------
 
