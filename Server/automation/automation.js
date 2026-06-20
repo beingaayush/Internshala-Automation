@@ -4,7 +4,7 @@ const path = require("path");
 const Resume = require("../models/Resume");
 
 // ===================== ANSWER LOGIC =====================
-function getAnsw(question, resume) {
+function getAnswer(question, resume) {
   const q = question.toLowerCase();
 
   if (q.includes("why should we hire")) {

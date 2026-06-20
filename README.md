@@ -3,6 +3,8 @@
 An end-to-end **MERN Stack automation project** that automates the Internshala internship application process 
 using **Puppeteer**, with secure authentication, resume management, and a centralized dashboard.
 
+# NOTE : This project uses Puppeteer-based browser automation and is designed to run in a local environment where browser interaction and CAPTCHA handling are required.
+
 ## 🎥 Project Demo
 
 Detailed walkthrough covering:
