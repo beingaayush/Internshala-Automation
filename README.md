@@ -69,28 +69,27 @@ Watch Demo: https://www.loom.com/share/cac078918b9545c2812ff9d6da954bb1
 
 📁 Folder Structure
 
-
-INTERNSHALA AUTOMATION/
+INTERNSHALA-AUTOMATION/
 │
 ├── client/        # React frontend
 ├── Server/        # Node + Express backend
 ├── package.json   # Root scripts (concurrently)
 └── README.md
-```
+
 
 ------------------------------------------------
 
 
 ▶️ How to Run the Project :
 
-1️⃣ Clone the repository
+1. Clone the repository
 
 ```bash
 git clone <your-repo-url>
 cd INTERNSHALA-AUTOMATION
 ```
 
-2️⃣ Install dependencies
+2. Install dependencies
 
 ```bash
 npm install
@@ -98,19 +97,19 @@ cd client && npm install
 cd ../Server && npm install
 ```
 
-3️⃣ Setup Environment Variables
+3. Setup Environment Variables
 
 Create `.env` inside `Server/`:
 
-```
+```bash
 PORT=5000
 MONGO_URI=your_mongodb_url
 JWT_SECRET=your_secret
 ```
 
----
 
-4️⃣ Run both frontend & backend together
+
+4. Run both frontend & backend together
 
 ```bash
 npm run dev
@@ -121,14 +120,14 @@ npm run dev
 
 --------------------------------------------
 
-# ⚠️ Disclaimer
+# Disclaimer
 
 This project is built **for educational purposes only**.
 Automating third-party platforms may violate their terms of service. Use responsibly.
 
 --------------------------------------------
 
-# 👨‍💻 Author
+# Author
 
 **Aayush Kumar**
 
